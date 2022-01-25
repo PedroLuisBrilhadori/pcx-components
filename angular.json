@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "pcx-ui": {
+      "projectType": "library",
+      "root": "projects/pcx-ui",
+      "sourceRoot": "projects/pcx-ui/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pcx-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pcx-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pcx-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pcx-ui/src/test.ts",
+            "tsConfig": "projects/pcx-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/pcx-ui/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "pcx-components"

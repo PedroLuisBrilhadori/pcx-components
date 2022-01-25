@@ -16,6 +16,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "pcx-ui": [
+        "dist/pcx-ui/pcx-ui",
+        "dist/pcx-ui"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [
