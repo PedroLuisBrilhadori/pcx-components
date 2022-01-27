@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { SideBarButton } from './models';
+import { PcxSideBarButton } from './models';
 
 @Component({
   selector: 'pcx-side-bar',
@@ -8,7 +8,7 @@ import { SideBarButton } from './models';
 })
 export class PcxSideBarComponent implements OnInit {
   @Input('buttons')
-  buttons: SideBarButton[] = [];
+  buttons: PcxSideBarButton[] = [];
 
   @Output() routes: EventEmitter<any> = new EventEmitter<any>();
 

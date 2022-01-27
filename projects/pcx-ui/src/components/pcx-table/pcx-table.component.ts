@@ -6,7 +6,7 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { ColumnsTableModel } from '.';
+import { PcxColumnsTableModel } from '.';
 import { EventEmitter } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatSort, Sort } from '@angular/material/sort';
@@ -22,7 +22,7 @@ export class PcxTableComponent implements OnInit, AfterViewInit {
   data: any[];
 
   @Input('displayedColumns')
-  displayedColumns: ColumnsTableModel[];
+  displayedColumns: PcxColumnsTableModel[];
 
   @Input('multiSelect')
   multiSelect: boolean = false;

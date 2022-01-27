@@ -4,7 +4,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ColumnsTableModel, TableModule } from '.';
+import { PcxColumnsTableModel, TableModule } from '.';
 
 import { PcxTableComponent } from './pcx-table.component';
 
@@ -20,7 +20,7 @@ const mockEvents = [
   { id: '2', teste: 'Paulo' },
 ];
 
-const mockColumns: ColumnsTableModel[] = [
+const mockColumns: PcxColumnsTableModel[] = [
   { name: 'id', displayedName: 'id', sort: false },
   { name: 'teste', displayedName: 'nome', sort: true },
 ];

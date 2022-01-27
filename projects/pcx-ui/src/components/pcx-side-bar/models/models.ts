@@ -1,4 +1,4 @@
-export interface SideBarButton {
+export interface PcxSideBarButton {
   name: string;
   route: string;
   special?: Function;
