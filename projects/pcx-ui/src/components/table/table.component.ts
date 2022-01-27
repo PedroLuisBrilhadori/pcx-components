@@ -13,11 +13,11 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 @Component({
-  selector: 'table-component',
+  selector: 'pcx-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
-export class TableComponent implements OnInit, AfterViewInit {
+export class PcxTableComponent implements OnInit, AfterViewInit {
   @Input('dataSource')
   data: any[];
 

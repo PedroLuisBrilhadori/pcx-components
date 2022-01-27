@@ -6,7 +6,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ColumnsTableModel, TableModule } from '.';
 
-import { TableComponent } from './table.component';
+import { PcxTableComponent } from './table.component';
 
 const mockData = [
   { id: '1', teste: 'Pedro' },
@@ -25,13 +25,13 @@ const mockColumns: ColumnsTableModel[] = [
   { name: 'teste', displayedName: 'nome', sort: true },
 ];
 
-describe('TableComponent', () => {
-  let component: TableComponent;
-  let fixture: ComponentFixture<TableComponent>;
+describe('PcxTableComponent', () => {
+  let component: PcxTableComponent;
+  let fixture: ComponentFixture<PcxTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TableComponent],
+      declarations: [PcxTableComponent],
       imports: [
         NoopAnimationsModule,
         MatTableModule,
@@ -42,7 +42,7 @@ describe('TableComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TableComponent);
+    fixture = TestBed.createComponent(PcxTableComponent);
     component = fixture.componentInstance;
     component.data = mockData;
     component.displayedColumns = mockColumns;

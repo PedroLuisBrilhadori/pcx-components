@@ -1,13 +1,14 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-tool-bar',
+  selector: 'pcx-tool-bar',
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.scss'],
 })
-export class ToolBarComponent implements OnInit {
-  titleApp: string = 'Caderneta Virtual';
+export class PcxToolBarComponent {
+  @Input('title')
+  titleApp: string = '';
 
   @Output() menuButton: EventEmitter<any> = new EventEmitter<any>();
 
@@ -16,6 +17,4 @@ export class ToolBarComponent implements OnInit {
   }
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

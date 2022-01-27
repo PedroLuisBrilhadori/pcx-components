@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
-import { ToolBarComponent } from './tool-bar.component';
+import { PcxToolBarComponent } from './tool-bar.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [ToolBarComponent],
+  declarations: [PcxToolBarComponent],
   imports: [CommonModule, MatToolbarModule, MatIconModule, RouterModule],
-  exports: [ToolBarComponent],
+  exports: [PcxToolBarComponent],
 })
-export class ToolBarModule {}
+export class PcxToolBarModule {}

@@ -6,7 +6,7 @@ import { SideBarButton } from './models';
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.scss'],
 })
-export class SideBarComponent implements OnInit {
+export class PcxSideBarComponent implements OnInit {
   @Input('buttons')
   buttons: SideBarButton[] = [];
 
