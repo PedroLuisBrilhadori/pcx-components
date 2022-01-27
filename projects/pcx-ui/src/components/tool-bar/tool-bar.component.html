@@ -1,8 +1,14 @@
-<mat-toolbar color="primary">
+<mat-toolbar [color]="color" class="flex justify-between">
+  <ng-container
+    *ngTemplateOutlet="toolBarTemplate ? toolBarTemplate : defaultToolBar"
+  ></ng-container>
+</mat-toolbar>
+
+<ng-template #defaultToolBar>
   <button mat-icon-button (click)="clickMenu()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span class="flex-auto"></span>
+
   <a *ngIf="route" [routerLink]="''"> {{ titleApp }}</a>
   <a *ngIf="!route"> {{ titleApp }}</a>
-</mat-toolbar>
+</ng-template>

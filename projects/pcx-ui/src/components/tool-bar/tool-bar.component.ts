@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, TemplateRef } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -12,6 +12,12 @@ export class PcxToolBarComponent {
 
   @Input('route')
   route: boolean = false;
+
+  @Input('color')
+  color: string = 'primary';
+
+  @Input('toolBarTemplate')
+  toolBarTemplate: TemplateRef<any>;
 
   @Output() menuButton: EventEmitter<any> = new EventEmitter<any>();
 
