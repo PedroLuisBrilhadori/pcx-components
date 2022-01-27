@@ -3,5 +3,6 @@
     <mat-icon>menu</mat-icon>
   </button>
   <span class="flex-auto"></span>
-  <a [routerLink]="''"> {{ titleApp }}</a>
+  <a *ngIf="route" [routerLink]="''"> {{ titleApp }}</a>
+  <a *ngIf="!route"> {{ titleApp }}</a>
 </mat-toolbar>
