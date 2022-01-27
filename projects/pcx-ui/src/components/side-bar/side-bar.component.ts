@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SideBarButton } from './models';
 
 @Component({
-  selector: 'pedro-side-bar',
+  selector: 'pcx-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.scss'],
 })
