@@ -49,7 +49,7 @@ export class PcxTableComponent implements OnInit, AfterViewInit {
       throw Error('fi, a tabela não tá preenchida...');
     } else {
       this.displayedColumns.forEach((column) => {
-        this.columnsToDisplay.push(column.displayedName);
+        this.columnsToDisplay.push(column.displayName);
       });
       if (this.data) {
         this.dataSource = new MatTableDataSource(this.data);

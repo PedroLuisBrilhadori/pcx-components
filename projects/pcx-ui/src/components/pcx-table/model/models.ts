@@ -1,5 +1,5 @@
 export class PcxColumnsTableModel {
   name: string;
-  displayedName: string;
-  sort: boolean;
+  displayName: string;
+  sort?: boolean = false;
 }

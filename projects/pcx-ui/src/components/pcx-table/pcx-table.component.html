@@ -34,16 +34,16 @@
    -->
 
   <ng-container
-    [matColumnDef]="column.displayedName"
+    [matColumnDef]="column.displayName"
     *ngFor="let column of displayedColumns"
   >
     <div *ngIf="column.sort; else elseBlock">
       <th mat-header-cell *matHeaderCellDef mat-sort-header="{{ column.name }}">
-        {{ column.displayedName }}
+        {{ column.displayName }}
       </th>
     </div>
     <ng-template #elseBlock>
-      <th mat-header-cell *matHeaderCellDef>{{ column.displayedName }}</th>
+      <th mat-header-cell *matHeaderCellDef>{{ column.displayName }}</th>
     </ng-template>
     <td mat-cell *matCellDef="let element">{{ element[column.name] }}</td>
   </ng-container>
