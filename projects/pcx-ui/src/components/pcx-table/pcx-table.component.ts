@@ -14,8 +14,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 @Component({
   selector: 'pcx-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss'],
+  templateUrl: './pcx-table.component.html',
+  styleUrls: ['../../util/tailwind.scss', './pcx-table.component.scss'],
 })
 export class PcxTableComponent implements OnInit, AfterViewInit {
   @Input('dataSource')

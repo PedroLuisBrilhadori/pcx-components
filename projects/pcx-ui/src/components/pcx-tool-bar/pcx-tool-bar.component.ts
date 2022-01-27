@@ -3,8 +3,8 @@ import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pcx-tool-bar',
-  templateUrl: './tool-bar.component.html',
-  styleUrls: ['../../util/tailwind.scss', './tool-bar.component.scss'],
+  templateUrl: './pcx-tool-bar.component.html',
+  styleUrls: ['../../util/tailwind.scss', './pcx-tool-bar.component.scss'],
 })
 export class PcxToolBarComponent {
   @Input('title')

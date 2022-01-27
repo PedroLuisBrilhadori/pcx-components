@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PcxSideBarComponent } from './side-bar.component';
+import { PcxSideBarComponent } from './pcx-side-bar.component';
 
 describe('PcxSideBarComponent', () => {
   let component: PcxSideBarComponent;

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PcxCardTemplateComponent } from './card-template.component';
+import { PcxToolBarComponent } from './pcx-tool-bar.component';
 
-describe('PcxCardTemplateComponent', () => {
-  let component: PcxCardTemplateComponent;
-  let fixture: ComponentFixture<PcxCardTemplateComponent>;
+describe('PcxToolBarComponent', () => {
+  let component: PcxToolBarComponent;
+  let fixture: ComponentFixture<PcxToolBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PcxCardTemplateComponent],
+      declarations: [PcxToolBarComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PcxCardTemplateComponent);
+    fixture = TestBed.createComponent(PcxToolBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

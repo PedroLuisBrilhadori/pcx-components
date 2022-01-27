@@ -3,8 +3,8 @@ import { SideBarButton } from './models';
 
 @Component({
   selector: 'pcx-side-bar',
-  templateUrl: './side-bar.component.html',
-  styleUrls: ['./side-bar.component.scss'],
+  templateUrl: './pcx-side-bar.component.html',
+  styleUrls: ['../../util/tailwind.scss', './pcx-side-bar.component.scss'],
 })
 export class PcxSideBarComponent implements OnInit {
   @Input('buttons')

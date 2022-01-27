@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PcxNotFoundComponent } from './not-found.component';
+import { PcxNotFoundComponent } from './pcx-not-found.component';
 
 @NgModule({
   declarations: [PcxNotFoundComponent],

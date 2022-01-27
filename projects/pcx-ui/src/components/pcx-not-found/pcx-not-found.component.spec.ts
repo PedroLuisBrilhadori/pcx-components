@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PcxNotFoundComponent } from './not-found.component';
+import { PcxNotFoundComponent } from './pcx-not-found.component';
 
 describe('PcxNotFoundComponent', () => {
   let component: PcxNotFoundComponent;

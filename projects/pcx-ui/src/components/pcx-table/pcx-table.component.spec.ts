@@ -6,7 +6,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ColumnsTableModel, TableModule } from '.';
 
-import { PcxTableComponent } from './table.component';
+import { PcxTableComponent } from './pcx-table.component';
 
 const mockData = [
   { id: '1', teste: 'Pedro' },
