@@ -18,23 +18,37 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
   styleUrls: ['../../util/tailwind.scss', './pcx-table.component.scss'],
 })
 export class PcxTableComponent implements OnInit, AfterViewInit {
+  /** Propriedade responsavel por exibir os items da tabela */
   @Input('dataSource')
   data: any[];
 
+  /** Propriedade responsavel por criar e exibir as colunas da tabela */
   @Input('displayedColumns')
   displayedColumns: PcxColumnsTableModel[];
 
+  /**
+   * TODO: criar tipo de seleção novo
+   * propriedade responsavel por o modo de seleção do componente
+   */
   @Input('multiSelect')
   multiSelect: boolean = false;
 
+  /**
+   * Output que emite seleções na tabela
+   */
   @Output('selectedRow')
   selected: EventEmitter<any> = new EventEmitter<any>();
 
   @ViewChild(MatSort) sort: MatSort;
 
-  columnsToDisplay: string[] = [];
+  private _columnsToDisplay: string[] = [];
 
-  selection = new SelectionModel<any>(true, []);
+  /** Propriedade que exibe os nomes das colunas */
+  get columnsToDisplay() {
+    return this._columnsToDisplay;
+  }
+
+  private selection = new SelectionModel<any>(true, []);
 
   dataSource: any;
 
@@ -42,14 +56,14 @@ export class PcxTableComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     if (this.multiSelect) {
-      this.columnsToDisplay.push('select');
+      this._columnsToDisplay.push('select');
     }
 
     if (this.displayedColumns === undefined || this.data === undefined) {
       throw Error('fi, a tabela não tá preenchida...');
     } else {
       this.displayedColumns.forEach((column) => {
-        this.columnsToDisplay.push(column.displayName);
+        this._columnsToDisplay.push(column.displayName);
       });
       if (this.data) {
         this.dataSource = new MatTableDataSource(this.data);
@@ -60,8 +74,8 @@ export class PcxTableComponent implements OnInit, AfterViewInit {
   selectRow(event: any) {
     if (this.multiSelect) {
       this.selection.toggle(event);
-      this.selected.emit(this.selection.selected);
-    } else this.selected.emit(event);
+    }
+    this.selected.emit(this.selection.selected);
   }
 
   // -----------------------------------------------------------------------------------------
