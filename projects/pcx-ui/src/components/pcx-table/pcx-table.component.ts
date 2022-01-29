@@ -48,7 +48,7 @@ export class PcxTableComponent implements OnInit, AfterViewInit {
     return this._columnsToDisplay;
   }
 
-  private selection = new SelectionModel<any>(true, []);
+  selection = new SelectionModel<any>(true, []);
 
   dataSource: any;
 
