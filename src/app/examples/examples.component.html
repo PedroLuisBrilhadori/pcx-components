@@ -1,1 +1,16 @@
-<pcx-tool-bar title="PcxComponents"></pcx-tool-bar>
+<mat-sidenav-container class="w-hull h-full">
+  <mat-sidenav #drawer>
+    <pcx-side-bar
+      (routes)="route = $event"
+      [buttons]="buttonsSideBar"
+      class=""
+    ></pcx-side-bar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <pcx-tool-bar
+      title="PcxComponents"
+      (menuButton)="drawer.toggle()"
+    ></pcx-tool-bar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
